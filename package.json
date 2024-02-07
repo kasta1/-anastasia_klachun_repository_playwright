@@ -1,0 +1,30 @@
+{
+  "name": "-anastasia_klachun_repository_playwright",
+  "version": "1.0.0",
+  "description": "Just create repository for training playwright",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "fsevents": "^2.3.2",
+    "playwright": "^1.41.2",
+    "playwright-core": "^1.41.2",
+    "undici-types": "^5.26.5"
+  }
+}
