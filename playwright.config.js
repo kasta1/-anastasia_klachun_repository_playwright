@@ -14,21 +14,21 @@ module.exports = defineConfig({
   testDir: './tests',
   workers: 2,
   fullyParallel: false,
- //testMatch:'./tests/**/*.spec.js',
-  testIgnore:'./tests/**/*.skip.spec.js',
-  globalSetup:'global.setup.js',
-  globalTeardown:'global.teardown.js',
+  //testMatch:'./tests/**/*.spec.js',
+  testIgnore: './tests/**/*.skip.spec.js',
+  globalSetup: 'global.setup.js',
+  globalTeardown: 'global.teardown.js',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  reporter: 'dot',
+  reporter: 'html',
   use: {
     headless: false,
     baseURL: 'https://qauto.forstudy.space/',
     httpCredentials: {
-      username:'guest',
-      password:'welcome2qauto'
+      username: 'guest',
+      password: 'welcome2qauto',
     },
-    screenshot:'only-on-failure',
+    screenshot: 'only-on-failure',
     trace: 'on',
   },
 
@@ -36,11 +36,12 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'smoke',
-      testMatch:'*.smoke.spec.js',
+      testMatch: '*.smoke.spec.js',
       use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: 'regression',
+      name: 'homework19',
+      testMatch: 'homework19.spec.js',
       use: { ...devices['Desktop Chrome'] },
     },
 

@@ -1,3 +1,3 @@
-module.exports=()=>{
-    console.log('GLOBAL TEARDOWN');
-};
+module.exports = () => {
+  console.log('GLOBAL TEARDOWN')
+}
