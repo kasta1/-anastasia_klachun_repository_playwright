@@ -71,7 +71,7 @@ test.describe('registration flow', () => {
     await expect(alert).toBeVisible();
   })
 
-  test('Check Last Name field negative test, invalid data ', async ({ page }) => {
+  test('Check Email field negative test, invalid data ', async ({ page }) => {
     await page.locator('#signupEmail').fill('dgvh');
     await page.locator('#signupName').click()
     const alert = page.getByText('Email is incorrect');
