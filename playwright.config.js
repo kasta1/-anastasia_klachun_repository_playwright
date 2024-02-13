@@ -14,7 +14,7 @@ module.exports = defineConfig({
   testDir: './tests',
   workers: 2,
   fullyParallel: false,
-  //testMatch:'./tests/**/*.spec.js',
+  testMatch:'./tests/**/*.spec.js',
   testIgnore: './tests/**/*.skip.spec.js',
   globalSetup: 'global.setup.js',
   globalTeardown: 'global.teardown.js',
@@ -34,14 +34,19 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // {
+    //   name: 'smoke',
+    //   testMatch: '*.smoke.spec.js',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
+    // {
+    //   name: 'homework19',
+    //   testMatch: 'homework19.spec.js',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
     {
-      name: 'smoke',
-      testMatch: '*.smoke.spec.js',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'homework19',
-      testMatch: 'homework19.spec.js',
+      name: 'assertions',
+      testMatch: 'homework20.spec.js',
       use: { ...devices['Desktop Chrome'] },
     },
 
