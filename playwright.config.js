@@ -1,15 +1,7 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test')
+const {envConfig} = require('./env/env-config')
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-/**
- * @see https://playwright.dev/docs/test-configuration
- */
 module.exports = defineConfig({
   testDir: './tests',
   workers: 2,
@@ -23,10 +15,10 @@ module.exports = defineConfig({
   reporter: 'html',
   use: {
     headless: false,
-    baseURL: 'https://qauto.forstudy.space/',
+    baseURL: envConfig.baseUrl ,
     httpCredentials: {
-      username: 'guest',
-      password: 'welcome2qauto',
+      username: envConfig.userName ,
+      password: envConfig.userPass ,
     },
     screenshot: 'only-on-failure',
     trace: 'on',
@@ -46,7 +38,8 @@ module.exports = defineConfig({
     // },
     {
       name: 'assertions',
-      testMatch: 'homework20.spec.js',
+      testMatch: 'homework21.spec.js',
+     // testMatch: 'enviromentVariables.spec.js',
       use: { ...devices['Desktop Chrome'] },
     },
 

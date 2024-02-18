@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --project=homework19 --headed",
+    "test:stage": " NODE_ENV=stage  npx playwright test",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
@@ -16,6 +17,7 @@
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.11.16",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "crossenv": "^0.0.2-security",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5"
   },
@@ -23,6 +25,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "dotenv": "^16.4.4",
     "fsevents": "^2.3.2",
     "playwright": "^1.41.2",
     "playwright-core": "^1.41.2",
