@@ -1,5 +1,5 @@
 const {test,expect} = require('@playwright/test')
-const { default: WelcomePage } = require('../../src/pages/WelcomePage');
+const { default: WelcomePage } = require('../../src/pages/welcomePage/WelcomePage');
 test.describe('registration flow', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('/')

@@ -4,7 +4,7 @@
   "description": "Just create repository for training playwright",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --project=homework19 --headed",
+    "test:hw18": "NODE_ENV=stage playwright test --project=homework21",
     "test:stage": " NODE_ENV=stage  npx playwright test",
     "format": "prettier --write .",
     "lint": "eslint .",

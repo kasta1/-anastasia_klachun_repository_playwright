@@ -12,7 +12,7 @@ module.exports = defineConfig({
   globalTeardown: 'global.teardown.js',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  reporter: 'html',
+  reporter: [['html', {open: 'always'}]],
   use: {
     headless: false,
     baseURL: envConfig.baseUrl ,
@@ -37,8 +37,8 @@ module.exports = defineConfig({
     //   use: { ...devices['Desktop Chrome'] },
     // },
     {
-      name: 'assertions',
-      testMatch: 'homework21.spec.js',
+      name: 'homework21',
+      testMatch: 'homework23.spec.js',
      // testMatch: 'enviromentVariables.spec.js',
       use: { ...devices['Desktop Chrome'] },
     },

@@ -1,8 +1,8 @@
 //import LoginForm from '../components/LoginForm';
 export default class WelcomePage{
     constructor(page){
-this.page = page;
-this.signUpName = this.page.locator('#signupName');
+        this.page = page;
+        this.signUpName = this.page.locator('#signupName');
         this.signUpLastName = this.page.locator('#signupLastName');
         this.signUpEmail = this.page.locator('#signupEmail');
         this.signUpPassword = this.page.locator('#signupPassword');

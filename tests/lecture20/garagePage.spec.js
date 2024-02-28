@@ -1,5 +1,5 @@
 import {test, expect } from '@playwright/test';
-import GaragePage from '../../src/pages/GaragePage';
+import GaragePage from '../../src/pages/garagePage/GaragePage';
 test. describe('Garage page', () => {
     test.only('should have Add btn',
         async ({ page }) => {
